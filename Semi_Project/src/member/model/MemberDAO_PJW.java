@@ -78,13 +78,13 @@ public class MemberDAO_PJW implements InterMemberDAO_PJW {
 			conn= ds.getConnection();
 			
 			String sql = " select userid, name, email, mobile, postcode, address, detailaddress, extraaddress, "+
-					" birthyyyy, birthmm, birthdd, height, weight, topsize, bottomsize, point, registerday, pwdchangegap, "+
+					" birthyyyy, birthmm, birthdd, height, weight, topsize, bottomsize, registerday, pwdchangegap, "+
 					" NVL(lastlogingap, trunc( months_between(sysdate,registerday) )) AS lastlogingap "+
 					" from "+
 					" ( "+
 					" select userid, name , email, mobile, postcode, address, detailaddress, extraaddress, "+
 					" substr(birthday,1,4) as birthyyyy, substr(birthday,6,2) as birthmm, substr(birthday,9) as birthdd "+
-					" , height, weight, topsize, bottomsize, point, registerday, "+
+					" , height, weight, topsize, bottomsize,  registerday, "+
 					" trunc(months_between(sysdate, lastpwdchangedate)) as pwdchangegap "+
 					" from tbl_member "+
 					" where status = 1 and userid = ? and pwd = ? "+
@@ -118,17 +118,16 @@ public class MemberDAO_PJW implements InterMemberDAO_PJW {
 	            member.setWeight(rs.getInt(13));
 	            member.setTopsize(rs.getString(14));
 	            member.setBottomsize(rs.getString(15));
-	            member.setPoint(rs.getInt(16));
-	            member.setRegisterday(rs.getString(17));
+	            member.setRegisterday(rs.getString(16));
 	            
-	            if(rs.getInt(18) >= 3) {
+	            if(rs.getInt(17) >= 3) {
 	            	// 마지막으로 암호를 변경한 날짜가 현재시각으로 부터 3개월이 지났으면 true
 	                // 마지막으로 암호를 변경한 날짜가 현재시각으로 부터 3개월이 지나지 않았으면 false
 	            	
 	            	member.setRequirePwdChange(true);
 	            	// 로그인시 암호를 변경해라는 alert 를 띄우도록 할때 사용한다.
 	            }
-	            if (rs.getInt(19) >= 12) {
+	            if (rs.getInt(18) >= 12) {
 	            	// 마지막으로 로그인 한 날짜시간이 현재시각으로 부터 1년이 지났으면 휴면으로 지정
 	            	
 	            	member.setIdle(1);

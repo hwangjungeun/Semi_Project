@@ -16,7 +16,6 @@ public class IdSearchAction extends AbstractController {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 			
-			System.out.println("~~~~~ 호호호");
 			
 			String method = request.getMethod();
 			// "GET" or "POST"
