@@ -14,9 +14,6 @@
 
 <jsp:include page="./header.jsp" />
 	
-
-<%-- 	시작페이지 --%>
-
 	
 	<!-- 상단 컨텐츠 시작 -->
 	<div id="visual" class ="row custom-topcontents container mx-auto p-0">
@@ -97,4 +94,3 @@
 	
 	
 <jsp:include page="./footer.jsp" />
-
