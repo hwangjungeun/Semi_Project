@@ -28,7 +28,7 @@ public class OrderListAction extends AbstractController {
 		}
 		else {  */
 		
-
+ 
 			HttpSession session = request.getSession();
 			
 			MemberVO_PJW loginuser = (MemberVO_PJW) session.getAttribute("loginuser");

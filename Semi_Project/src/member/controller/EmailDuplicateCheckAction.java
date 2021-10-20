@@ -36,7 +36,7 @@ public class EmailDuplicateCheckAction extends AbstractController {
 			super.setRedirect(false);
 			super.setViewPage("/WEB-INF/jsonview.jsp");
 		}
-		
+		 
 	}
 
 }

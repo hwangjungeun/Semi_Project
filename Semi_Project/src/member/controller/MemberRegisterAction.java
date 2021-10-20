@@ -102,10 +102,6 @@ public class MemberRegisterAction extends AbstractController {
 				super.setViewPage("/WEB-INF/msg.jsp");
 			} 
 			
-			
-			
-			
-			
 		}
 		
 	}

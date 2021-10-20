@@ -32,7 +32,7 @@ public class ShowPointUsedListAction extends AbstractController {
 		if(currentShowPageNo == null) {
 			currentShowPageNo = "1";
 		}
-		
+		 
 		try {
 			
 			Integer.parseInt(currentShowPageNo);

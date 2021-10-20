@@ -100,7 +100,7 @@ public class OrderDetailListJSONAction extends AbstractController {
 			super.setViewPage("/WEB-INF/jsonview.jsp");
 			
 		}
-		
+		 
 	}
 
 }

@@ -31,7 +31,7 @@ public class OrderDetailListAction extends AbstractController {
 		
 			String odrcode = request.getParameter("odrcode");
 			request.setAttribute("odrcode", odrcode);
-			
+			 
 			
 //		}
 

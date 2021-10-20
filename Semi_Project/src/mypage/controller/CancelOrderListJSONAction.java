@@ -95,7 +95,7 @@ public class CancelOrderListJSONAction extends AbstractController {
 			super.setViewPage("/WEB-INF/jsonview.jsp");
 			
 		}
-		
+		 
 	}
 
 }

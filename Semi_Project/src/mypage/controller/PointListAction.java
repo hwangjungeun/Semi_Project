@@ -67,7 +67,7 @@ public class PointListAction extends AbstractController {
 			if(currentShowPageNo == null) {
 				currentShowPageNo = "1";
 			}
-			
+			 
 			try {
 				
 				Integer.parseInt(currentShowPageNo);
